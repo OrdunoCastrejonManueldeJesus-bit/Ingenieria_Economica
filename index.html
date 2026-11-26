@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Evaluación de Inversiones</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="ajustes.js" defer></script>
+</head>
+<body data-mode="inicio">
+
+  <header class="titlebar" role="banner">
+    <span class="logo" aria-hidden="true">EI</span>
+    <span class="ttl">Evaluación de inversiones</span>
+    <button type="button" class="theme" id="tema" aria-label="Cambiar modo de color">☾ Modo oscuro</button>
+  </header>
+
+  <nav class="tabs" aria-label="Navegación principal">
+    <a href="index.html" class="on" aria-current="page">Inicio</a>
+    <a href="pri.html">PRI</a>
+    <a href="vpn.html">VPN</a>
+    <a href="vae.html">VAE</a>
+    <a href="tir.html">TIR</a>
+  </nav>
+
+  <main id="main-content">
+    <div class="page">
+      <h1>Evaluación de inversiones</h1>
+      <p class="sub">Elige el método que quieres calcular.</p>
+
+      <div class="tiles">
+        <a class="tile" href="pri.html" style="--c:#2b579a">
+          <i>PRI</i>
+          <div>
+            <b>Periodo de recuperación de inversión</b>
+            <span>Calcula en cuánto tiempo los flujos acumulados cubren la inversión inicial.</span>
+          </div>
+        </a>
+        <a class="tile" href="vpn.html" style="--c:#217346">
+          <i>VPN</i>
+          <div>
+            <b>Valor presente neto</b>
+            <span>Trae los flujos futuros a valor de hoy y los compara con la inversión.</span>
+          </div>
+        </a>
+        <a class="tile" href="vae.html" style="--c:#c43e1c">
+          <i>VAE</i>
+          <div>
+            <b>Valor anual equivalente</b>
+            <span>Convierte el VPN en una cantidad uniforme por año.</span>
+          </div>
+        </a>
+        <a class="tile" href="tir.html" style="--c:#7719aa">
+          <i>TIR</i>
+          <div>
+            <b>Tasa interna de rendimiento</b>
+            <span>Encuentra la tasa que hace el VPN igual a cero. Opcional: compárala con tu TMAR.</span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </main>
+
+  <footer class="status" role="contentinfo">
+    <span>Listo</span>
+    <span class="autor">Hecho por Orduño Castrejon Manuel de Jesus</span>
+    <span>
+      <select id="moneda" aria-label="Seleccionar tipo de moneda">
+        <option value="MXN">Pesos (MXN)</option>
+        <option value="USD">Dólares (USD)</option>
+        <option value="EUR">Euros (EUR)</option>
+      </select>
+    </span>
+  </footer>
+
+</body>
+</html>

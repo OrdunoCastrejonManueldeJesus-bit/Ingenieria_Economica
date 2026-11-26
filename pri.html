@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Periodo de recuperación de inversión (PRI)</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="ajustes.js" defer></script>
+  <script src="app.js" defer></script>
+</head>
+<body data-mode="pri">
+
+  <header class="titlebar" role="banner">
+    <span class="logo" aria-hidden="true">PRI</span>
+    <span class="ttl">Evaluación de inversiones</span>
+    <button type="button" class="theme" id="tema" aria-label="Cambiar modo de color">☾ Modo oscuro</button>
+  </header>
+
+  <nav class="tabs" aria-label="Navegación principal">
+    <a href="index.html">Inicio</a>
+    <a href="pri.html" class="on" aria-current="page">PRI</a>
+    <a href="vpn.html">VPN</a>
+    <a href="vae.html">VAE</a>
+    <a href="tir.html">TIR</a>
+  </nav>
+
+  <main id="main-content">
+    <div class="page">
+      <h1>Periodo de recuperación de inversión (PRI)</h1>
+      <p class="sub">Calcula en cuánto tiempo los flujos acumulados cubren la inversión inicial.</p>
+
+      <form id="f">
+        <div class="row">
+          <label>Inversión inicial (<span class="mon">MXN</span>)
+            <input id="inv" type="number" step="any" min="0" required>
+          </label>
+          <label>Número de años
+            <input id="n" type="number" min="1" max="30" value="5">
+          </label>
+        </div>
+
+        <button type="button" class="btn" id="gen">Generar flujos</button>
+        <div id="flujos"></div>
+      </form>
+
+      <section class="res" id="res" hidden aria-live="polite"></section>
+    </div>
+
+    <div class="acciones">
+      <button type="submit" form="f" class="btn primary">Calcular</button>
+      <button type="button" class="btn" id="limpiar">Limpiar</button>
+      <a class="btn" href="index.html">Volver al menú</a>
+    </div>
+  </main>
+
+  <footer class="status" role="contentinfo">
+    <span>Listo</span>
+    <span class="autor">Hecho por Orduño Castrejon Manuel de Jesus</span>
+    <span>
+      <select id="moneda" aria-label="Seleccionar tipo de moneda">
+        <option value="MXN">Pesos (MXN)</option>
+        <option value="USD">Dólares (USD)</option>
+        <option value="EUR">Euros (EUR)</option>
+      </select>
+    </span>
+  </footer>
+
+</body>
+</html>
